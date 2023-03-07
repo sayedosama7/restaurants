@@ -447,9 +447,7 @@ a {
     border: 1px solid #fff;
 
 }
-.card img {
-    height: 350px ;
-}
+
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 2px 15px rgba(107, 100, 100, 0.726);
@@ -481,8 +479,6 @@ a {
 
 .card-text {
     color: #fff;
-
-
 }
 .card-body .card-title {
     color: var(--main-color);
