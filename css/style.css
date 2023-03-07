@@ -174,7 +174,6 @@ a {
     top: 0;
     left: -100%;
     transition: var(--main-transition);
-
 }
 
 .header .main_nav>li>a:hover {
@@ -446,8 +445,11 @@ a {
     transition: transform var(--main-transition), box-shadow var(--main-transition);
     background-color: var(--section-background);
     border: 1px solid #fff;
-}
 
+}
+.card img {
+    height: 350px ;
+}
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 2px 15px rgba(107, 100, 100, 0.726);
@@ -460,7 +462,7 @@ a {
     color: var(--main-color);
     position: absolute;
     right: 15px;
-    bottom: 17px;
+    bottom: 5px;
 }
 
 .card:hover::after {
@@ -479,16 +481,23 @@ a {
 
 .card-text {
     color: #fff;
+
+
 }
 .card-body .card-title {
     color: var(--main-color);
+padding: 0;
 }
 .card button {
     border: none;
     background-color: transparent;
     color: var(--main-color);
-    padding: 20px;
+    padding: 10px 0 10px 20px;
     text-transform: capitalize;
+}
+.card-body {
+    flex: 0;
+    padding-left: 20px;
 }
 
 @media (max-width:767px) {
@@ -500,7 +509,17 @@ a {
         padding: 0px 20px;
     }
 }
-
+.spikes {
+    position: relative;
+}
+.spikes::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 30px;
+    background-image: linear-gradient(135deg ,#777  25% ,transparent 25% ), linear-gradient(225deg ,#777 25% ,transparent 25% );
+    background-size: 30px;
+}
 /* end menu */
 
 /* start frieds */
@@ -765,6 +784,7 @@ a {
     position: relative;
     border-radius: 10px;
     margin-top: 20px;
+
 }
 
 .chefs .box::before,
@@ -860,7 +880,11 @@ a {
     color: #777;
     padding-bottom: 20px;
 }
-
+@media (max-width:767px) {
+    .chefs {
+        padding: 0 50px;
+    }
+}
 /* end chefs members  */
 
 /* start reservation */
@@ -893,9 +917,7 @@ a {
 
 .reservation .text {
     text-align: center;
-
     padding-top: 50px;
-
 }
 
 .reservation .text h2 {
@@ -912,7 +934,7 @@ a {
     background-color: #0c0c0c;
 }
 .reservation .box_right {
-padding: 100px 50px;
+padding: 150px 100px;
 }
 
 .reservation .box_right h2 {
@@ -938,18 +960,18 @@ padding: 100px 50px;
 }
 
 .box_right form input[type="submit"] {
-    background-color: var(--main-color);
-    color: white;
+    background-color: var(--section-background);
+    color: var(--main-color);
     padding: 10px 0;
     font-size: 20px;
     text-transform: capitalize;
     transition: var(--main-transition);
+    border: 1px solid var(--main-color);
 }
-
-.reservation .box_right form input[type="submit"]:hover {
-    background-color: var(--main-color-alt);
+.box_right form input[type="submit"]:hover {
+    background-color:var(--main-color);
+    color: var(--section-background) ;
 }
-
 .box_right form .textarea {
     resize: none;
     border: none;
@@ -1071,5 +1093,13 @@ padding: 100px 50px;
 }
 .sayed span:hover {
     color: #fff;
+}
+@media (max-width:767px ) {
+    .footer .address .icons {
+        flex-direction: column;
+    }
+    .footer .address .icons i  {
+        padding-bottom: 10px;
+    }
 }
 /* end footer */
